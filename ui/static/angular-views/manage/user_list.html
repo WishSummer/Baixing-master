@@ -1,0 +1,41 @@
+<section class="content-header">
+  <h1>
+    用户管理
+    <small>{{ ctrl.users.length }}个用户</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a ui-sref="manage"><i class="fa fa-wrench"></i> 管理</a></li>
+    <li class="active">用户</li>
+  </ol>
+</section>
+
+<section class="content">
+  <div class="box box-primary">
+    <div class="box-header with-border">
+      <h3 class="box-title">所有用户</h3>
+      <div class="box-tools pull-right">
+        <a class="btn btn-box-tool" ui-sref="manage_user_create">
+          <i class="fa fa-plus"></i> 创建用户
+        </a>
+      </div>
+    </div>
+    <div class="box-body no-padding">
+      <div class="table-responsive">
+        <table class="table table-hover table-striped">
+          <tbody>
+          <tr>
+            <th style="width:200px">ID</th>
+            <th>用户名</th>
+            <th style="width:100px">操作</th>
+          </tr>
+          <tr ng-repeat="user in ctrl.users">
+            <td>{{ user._id }}</td>
+            <td>{{ user.username }}</td>
+            <td><a ui-sref="manage_user_edit({id: user._id})">修改</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

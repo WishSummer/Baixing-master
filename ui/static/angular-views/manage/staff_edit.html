@@ -1,0 +1,41 @@
+<section class="content-header">
+  <h1>
+    修改员工
+  </h1>
+  <ol class="breadcrumb">
+    <li><a ui-sref="manage"><i class="fa fa-wrench"></i> 管理</a></li>
+    <li><a ui-sref="manage_staff">员工</a></li>
+    <li class="active">修改</li>
+  </ol>
+</section>
+
+<section class="content">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="box box-info">
+        <form ng-submit="ctrl.doUpdate()">
+          <div class="box-header with-border">
+            <h3 class="box-title">修改员工信息</h3>
+          </div>
+          <div class="box-body" ng-include="'/static/angular-views/manage/staff_form.html'"></div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-info">修改</button>
+            <a class="btn btn-default pull-right" ng-click="$root.goBack()">取消</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="box box-warning">
+        <form ng-submit="ctrl.doDelete()">
+          <div class="box-header with-border">
+            <h3 class="box-title">其他操作</h3>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-danger">删除该员工</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

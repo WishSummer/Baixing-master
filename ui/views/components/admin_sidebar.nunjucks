@@ -1,0 +1,10 @@
+<aside class="main-sidebar">
+  <section class="sidebar">
+    <ul class="sidebar-menu">
+      <li><a ui-sref="manage"><i class="fa fa-tachometer"></i> <span>仪表盘</span></a></li>
+      <li class="header">管理</li>
+      <li><a ui-sref="manage_staff"><i class="fa fa-wrench"></i> <span>员工管理</span></a></li>
+      <li><a ui-sref="manage_user"><i class="fa fa-wrench"></i> <span>系统用户管理</span></a></li>
+    </ul>
+  </section>
+</aside>
